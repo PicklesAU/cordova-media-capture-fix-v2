@@ -115,6 +115,22 @@ xmlns:android="http://schemas.android.com/apk/res/android"
                 <param name="ios-package" value="CDVCapture" />
             </feature>
         </config-file>
+      
+        <preference name="CAMERA_USAGE_DESCRIPTION" default="This app need camera access to take pictures"/>
+        <config-file target="*-Info.plist" parent="NSCameraUsageDescription">
+            <string>$CAMERA_USAGE_DESCRIPTION</string>
+        </config-file>
+
+        <preference name="MICROPHONE_USAGE_DESCRIPTION" default="This app need microphone access to record sounds"/>
+        <config-file target="*-Info.plist" parent="NSMicrophoneUsageDescription">
+            <string>$MICROPHONE_USAGE_DESCRIPTION</string>
+        </config-file>
+
+        <preference name="PHOTOLIBRARY_USAGE_DESCRIPTION" default="This app need photo library access to get pictures from there"/>
+        <config-file target="*-Info.plist" parent="NSPhotoLibraryUsageDescription">
+            <string>$PHOTOLIBRARY_USAGE_DESCRIPTION</string>
+        </config-file>
+      
         <header-file src="src/ios/CDVCapture.h" />
         <source-file src="src/ios/CDVCapture.m" />
         <resource-file src="src/ios/CDVCapture.bundle" />
