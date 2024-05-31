@@ -103,8 +103,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         <js-module src="www/android/init.js" name="init">
             <runs />
         </js-module>
-        <preference name="ANDROID_SUPPORT_V4_VERSION" default="27.+"/>
-        <framework src="androidx.legacy:legacy-support-v4:$ANDROID_SUPPORT_V4_VERSION"/>
+        <framework src="androidx.legacy:legacy-support-v4:1.0.0"/>
 
     </platform>
 
